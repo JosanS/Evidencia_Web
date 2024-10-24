@@ -20,3 +20,7 @@ Tambien se crearon las vistas basicas de:
 ### 6. ordenes/edit.blade.php
 ### 7. ordenes/show.blade.php
 ### 8. ordenes/archive.blade.php (Archivario de ordenes eliminadas)
+
+### app.blade.php
+### home.blade.php
+### dashboard.blade.php
