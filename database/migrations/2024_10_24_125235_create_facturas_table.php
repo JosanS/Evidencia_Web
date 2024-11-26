@@ -6,23 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('facturas', function (Blueprint $table) {
             $table->id('facturaID');
-            $table->foreignId('ordenID')->constrained('ordenes', 'ordenID');
+            $table->foreignId('ordenID')->
+            constrained('ordenes', 'ordenID');
             $table->string('datosFiscales');
             $table->datetime('fechaCreacion');
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('facturas');

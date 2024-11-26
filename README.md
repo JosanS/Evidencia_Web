@@ -20,3 +20,8 @@ Tambien se crearon las vistas basicas de:
 ### 6. ordenes/edit.blade.php
 ### 7. ordenes/show.blade.php
 ### 8. ordenes/archive.blade.php (Archivario de ordenes eliminadas)
+
+
+Se actualizaron las vistas creadas para tener un mejor diseño
+Se protegieron las vistas debidas (Usuarios registrados)
+Se incluyeron alertas

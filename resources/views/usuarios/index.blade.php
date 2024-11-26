@@ -4,10 +4,10 @@
 
 @section('content')
 <div class="container">
-    <h1>Usuarios</h1>
-    <a href="{{ route('usuarios.create') }}">Crear Usuario</a>
-    <table>
-        <thead>
+    <h1 class="mb-4">Usuarios</h1>
+    <a href="{{ route('usuarios.create') }}" class="btn btn-primary mb-3">Crear Usuario</a>
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
             <tr>
                 <th>Nombre</th>
                 <th>Estado</th>
@@ -18,9 +18,13 @@
             @foreach($usuarios as $user)
             <tr>
                 <td>{{ $user->nombre }}</td>
-                <td>{{ $user->active ? 'Active' : 'Inactive' }}</td>
                 <td>
-                    <a href="{{ route('usuarios.edit', $user->usuarioID) }}">Editar</a>
+                    <span class="badge {{ $user->active ? 'bg-success' : 'bg-secondary' }}">
+                        {{ $user->active ? 'Activo' : 'Inactivo' }}
+                    </span>
+                </td>
+                <td>
+                    <a href="{{ route('usuarios.edit', $user->usuarioID) }}" class="btn btn-sm btn-warning">Editar</a>
                 </td>
             </tr>
             @endforeach

@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('usuarios', function (Blueprint $table) {
@@ -17,14 +14,11 @@ return new class extends Migration
             $table->string('usuario')->unique();
             $table->string('contraseña');
             $table->string('rol_usuario');
-            $table->foreignId('departamentoID')->constrained('departamentos', 'departamentoID');
+            $table->foreignId('departamentoID')->
+            constrained('departamentos', 'departamentoID');
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('usuarios');

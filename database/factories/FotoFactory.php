@@ -6,9 +6,6 @@ use App\Models\Foto;
 use App\Models\Orden;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Foto>
- */
 class FotoFactory extends Factory
 {
     protected $model = Foto::class;

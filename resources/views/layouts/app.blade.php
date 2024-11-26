@@ -6,21 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Evidencia Web')</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <nav>
-        <!-- Add your navigation bar here -->
-        <a href="{{ route('home') }}">Inicio</a>
-        <a href="{{ route('dashboard') }}">Dashboard</a>
-        <a href="{{ route('usuarios.index') }}">Usuarios</a>
-        <a href="{{ route('ordenes.index') }}">Ordenes</a>
-    </nav>
+    <!-- Navbar -->
+    @include('layouts.nav')
 
-    <div class="content">
+
+    <!-- Alerts Section -->
+    <div class="container mt-4">
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger">{{ session('error') }}</div>
+        @endif
+        
         @yield('content')
     </div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @stack('scripts')
 </body>
 </html>
+

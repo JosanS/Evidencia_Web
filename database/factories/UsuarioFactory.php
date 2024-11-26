@@ -7,9 +7,6 @@ use App\Models\Departamento;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Usuario>
- */
 class UsuarioFactory extends Factory
 {
     protected $model = Usuario::class;

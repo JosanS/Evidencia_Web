@@ -6,9 +6,6 @@ use App\Models\Factura;
 use App\Models\Orden;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Factura>
- */
 class FacturaFactory extends Factory
 {
     protected $model = Factura::class;
